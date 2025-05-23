@@ -1,4 +1,3 @@
 # projeto-eccomerce
 
-
-teste joão
+Um projeto de e-commerce, desenvolvido como parte da disciplina de Gestão de Projetos do curso de ADS da FATEC de Presidente Prudente.
