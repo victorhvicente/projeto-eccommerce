@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Tipografia base */
+html {
+    font-size: 62.5%; /* 1rem = 10px, facilita o uso de rem */
+    scroll-behavior: smooth;
+}
+
+body, html {
+    height: 100%;
+}
+
+main {
+    height: 100vh;
+    background-color: #EFEFEF;
+    display: flex;
+    justify-content: center;
+}
+
+.conteudo-principal {
+    width: 80%;
+    margin-top: 5rem;
+}
+
+.filtro {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ordenar-exibir {
+    display: flex;
+    gap: 9rem;
+    width: 70%;
+}
+
+.filtro-opcao {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.filtro label, p {
+    font-size: 1.5rem;
+    color: #2C2C2C;
+    font-weight: 700;
+}
+
+span {
+    font-weight: 400;
+}
+
+.filtro select {
+    padding: 1rem;
+    border: none;
+    border-radius: 3px;
+    width: 70%;
+}
+
+.produtos {
+    margin-top: 6rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    border-radius: 3px;
+    padding: 3rem 1.5rem 1.5rem 1.5rem;
+    background-color: #FFFFFF;
+}
+
+.card img {
+    max-width: 20rem;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.card .descricao-produto {
+    font-weight: 600;
+    color: #2C2C2C;
+}
