@@ -19,7 +19,7 @@ body, html {
 }
 
 main {
-    height: 100vh;
+    height: auto;
     background-color: #EFEFEF;
     display: flex;
     justify-content: center;
@@ -27,7 +27,7 @@ main {
 
 .conteudo-principal {
     width: 80%;
-    margin-top: 5rem;
+    margin: 5rem 0 10rem 0;
 }
 
 .filtro {
@@ -69,13 +69,16 @@ span {
 
 .produtos {
     margin-top: 6rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 3colunas iguais */
+    gap: 2rem;
 }
 
 .card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 30%;
+    gap: 2rem;
     border-radius: 3px;
     padding: 3rem 1.5rem 1.5rem 1.5rem;
     background-color: #FFFFFF;
@@ -84,10 +87,72 @@ span {
 .card img {
     max-width: 20rem;
     height: auto;
-    margin-bottom: 1rem;
 }
 
 .card .descricao-produto {
     font-weight: 600;
+    color: #2C2C2C;
+}
+
+.preco {
+    width: 100%;
+}
+
+.preco p {
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #2C2C2C;
+}
+
+.preco .forma-pagamento {
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #7F858D;
+}
+
+.card button {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 3px;
+    color: #FFFFFF;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1.8rem;
+}
+
+.card button:hover {
+    background-color: #3399FF;
+}
+
+.navegacao {
+    display: flex;
+    justify-content: center;
+}
+
+.botoes-navegacao {
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 5px;
+}
+
+.botoes-navegacao a {
+    text-decoration: none;
+    color: #2C2C2C;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.botoes-navegacao a:hover {
+    color: #5C5C5C;
+}
+
+.botoes-navegacao svg {
+    width: 3rem;
+    height: auto;
     color: #2C2C2C;
 }
