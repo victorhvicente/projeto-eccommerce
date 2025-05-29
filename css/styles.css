@@ -145,8 +145,8 @@ nav ul li a:hover {
 }
 
 .product-image img {
-  width: 100%;
-  height: auto;
+  width: 60vw;
+  height: 30vh;
   transition: transform 0.5s;
 }
 
