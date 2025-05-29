@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DroneStore - A Maior Loja de Drones do Brasil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>DroneStore</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Início</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="#">Categorias</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="icons">
+                <a href="#"><i class="fas fa-search"></i></a>
+                <a href="#"><i class="fas fa-user"></i></a>
+                <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Carousel -->
+    <section class="hero-carousel">
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <!-- Slide 1 -->
+                <div class="carousel-slide active">
+                    <div class="slide-image" style="background-image: url('https://placeholder.pics/svg/1600x600/DEDEDE/555555/Drone%20Profissional');">
+                        <div class="container">
+                            <div class="slide-content">
+                                <h2>Drones Profissionais</h2>
+                                <p>Descubra nossa linha premium de drones para fotografia e filmagem profissional</p>
+                                <div class="slide-buttons">
+                                    <a href="produtos.html" class="btn btn-primary">Ver Produtos</a>
+                                    <a href="#" class="btn btn-secondary">Saiba Mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="carousel-slide">
+                    <div class="slide-image" style="background-image: url('https://placeholder.pics/svg/1600x600/DEDEDE/555555/Drone%20Racing');">
+                        <div class="container">
+                            <div class="slide-content">
+                                <h2>Drones de Corrida</h2>
+                                <p>Velocidade e adrenalina com nossos drones de alta performance para competições</p>
+                                <div class="slide-buttons">
+                                    <a href="produtos.html" class="btn btn-primary">Ver Produtos</a>
+                                    <a href="#" class="btn btn-secondary">Saiba Mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="carousel-slide">
+                    <div class="slide-image" style="background-image: url('https://placeholder.pics/svg/1600x600/DEDEDE/555555/Drone%20Iniciante');">
+                        <div class="container">
+                            <div class="slide-content">
+                                <h2>Drones para Iniciantes</h2>
+                                <p>Comece sua jornada no mundo dos drones com modelos fáceis de pilotar</p>
+                                <div class="slide-buttons">
+                                    <a href="produtos.html" class="btn btn-primary">Ver Produtos</a>
+                                    <a href="#" class="btn btn-secondary">Saiba Mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Carousel Controls -->
+            <button class="carousel-control prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-control next"><i class="fas fa-chevron-right"></i></button>
+            
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators">
+                <button class="indicator active" data-slide="0"></button>
+                <button class="indicator" data-slide="1"></button>
+                <button class="indicator" data-slide="2"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Banners -->
+    <section class="category-banners">
+        <div class="container">
+            <div class="banner-grid">
+                <div class="category-banner">
+                    <img src="https://placeholder.pics/svg/600x300/DEDEDE/555555/Drones%20Profissionais" alt="Drones Profissionais">
+                    <div class="banner-content">
+                        <h3>Drones Profissionais</h3>
+                        <a href="produtos.html" class="banner-link">Ver Coleção</a>
+                    </div>
+                </div>
+                <div class="category-banner">
+                    <img src="https://placeholder.pics/svg/600x300/DEDEDE/555555/Mini%20Drones" alt="Mini Drones">
+                    <div class="banner-content">
+                        <h3>Mini Drones</h3>
+                        <a href="produtos.html" class="banner-link">Ver Coleção</a>
+                    </div>
+                </div>
+                <div class="category-banner">
+                    <img src="https://placeholder.pics/svg/600x300/DEDEDE/555555/Drones%20Racing" alt="Drones de Corrida">
+                    <div class="banner-content">
+                        <h3>Drones de Corrida</h3>
+                        <a href="produtos.html" class="banner-link">Ver Coleção</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Produtos em Destaque</h2>
+                <a href="produtos.html" class="view-all">Ver Todos <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="products-slider">
+                <div class="products-track">
+                    <!-- Product 1 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <a href="#">
+                                <img src="https://placeholder.pics/svg/300x250/DEDEDE/555555/Drone%20X500" alt="Drone Profissional X500">
+                            </a>
+                            <div class="product-tag">Bestseller</div>
+                            <div class="product-actions">
+                                <button class="quick-view" title="Visualização Rápida"><i class="fas fa-eye"></i></button>
+                                <button class="add-to-wishlist" title="Adicionar aos Favoritos"><i class="far fa-heart"></i></button>
+                                <button class="compare" title="Comparar"><i class="fas fa-exchange-alt"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Drones Profissionais</div>
+                            <h3><a href="#">Drone Profissional X500</a></h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(42)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="old-price">R$ 3.999,00</span>
+                                <span class="current-price">R$ 2.899,00</span>
+                            </div>
+                            <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 2 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <a href="#">
+                                <img src="https://placeholder.pics/svg/300x250/DEDEDE/555555/Drone%20Mini" alt="Drone Mini Compacto">
+                            </a>
+                            <div class="product-tag">Novo</div>
+                            <div class="product-actions">
+                                <button class="quick-view" title="Visualização Rápida"><i class="fas fa-eye"></i></button>
+                                <button class="add-to-wishlist" title="Adicionar aos Favoritos"><i class="far fa-heart"></i></button>
+                                <button class="compare" title="Comparar"><i class="fas fa-exchange-alt"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Mini Drones</div>
+                            <h3><a href="#">Drone Mini Compacto</a></h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(28)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">R$ 1.299,00</span>
+                            </div>
+                            <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 3 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <a href="#">
+                                <img src="https://placeholder.pics/svg/300x250/DEDEDE/555555/Drone%20Pro" alt="Drone Pro X700">
+                            </a>
+                            <div class="product-tag sale">-15%</div>
+                            <div class="product-actions">
+                                <button class="quick-view" title="Visualização Rápida"><i class="fas fa-eye"></i></button>
+                                <button class="add-to-wishlist" title="Adicionar aos Favoritos"><i class="far fa-heart"></i></button>
+                                <button class="compare" title="Comparar"><i class="fas fa-exchange-alt"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Drones Profissionais</div>
+                            <h3><a href="#">Drone Pro X700</a></h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(56)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="old-price">R$ 4.599,00</span>
+                                <span class="current-price">R$ 3.899,00</span>
+                            </div>
+                            <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 4 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <a href="#">
+                                <img src="https://placeholder.pics/svg/300x250/DEDEDE/555555/Drone%20Racing" alt="Drone Racing Turbo">
+                            </a>
+                            <div class="product-actions">
+                                <button class="quick-view" title="Visualização Rápida"><i class="fas fa-eye"></i></button>
+                                <button class="add-to-wishlist" title="Adicionar aos Favoritos"><i class="far fa-heart"></i></button>
+                                <button class="compare" title="Comparar"><i class="fas fa-exchange-alt"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Drones de Corrida</div>
+                            <h3><a href="#">Drone Racing Turbo</a></h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(19)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">R$ 1.899,00</span>
+                            </div>
+                            <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 5 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <a href="#">
+                                <img src="https://placeholder.pics/svg/300x250/DEDEDE/555555/Drone%20Cam" alt="Drone Cam 8K">
+                            </a>
+                            <div class="product-tag">Destaque</div>
+                            <div class="product-actions">
+                                <button class="quick-view" title="Visualização Rápida"><i class="fas fa-eye"></i></button>
+                                <button class="add-to-wishlist" title="Adicionar aos Favoritos"><i class="far fa-heart"></i></button>
+                                <button class="compare" title="Comparar"><i class="fas fa-exchange-alt"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Drones com Câmera 4K</div>
+                            <h3><a href="#">Drone Cam 8K</a></h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(87)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">R$ 3.499,00</span>
+                            </div>
+                            <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Products Slider Controls -->
+                <button class="products-control prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="products-control next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promo Banner -->
+    <section class="promo-banner">
+        <div class="container">
+            <div class="promo-content">
+                <h2>Oferta Especial</h2>
+                <h3>Até 30% de desconto em drones selecionados</h3>
+                <p>Promoção válida por tempo limitado. Aproveite!</p>
+                <a href="produtos.html" class="btn btn-primary">Ver Ofertas</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Sellers -->
+    <section class="best-sellers">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mais Vendidos</h2>
+                <a href="produtos.html" class="view-all">Ver Todos <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <a href="#">
+                            <img src="https://placeholder.pics/svg/300x250/DEDEDE/555555/Drone%20X500" alt="Drone Profissional X500">
+                        </a>
+                        <div class="product-tag">Bestseller</div>
+                        <div class="product-actions">
+                            <button class="quick-view" title="Visualização Rápida"><i class="fas fa-eye"></i></button>
+                            <button class="add-to-wishlist" title="Adicionar aos Favoritos"><i class="far fa-heart"></i></button>
+                            <button class="compare" title="Comparar"><i class="fas fa-exchange-alt"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Drones Profissionais</div>
+                        <h3><a href="#">Drone Profissional X500</a></h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(42)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="old-price">R$ 3.999,00</span>
+                            <span class="current-price">R$ 2.899,00</span>
+                        </div>
+                        <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <a href="#">
+                            <img src="https://placeholder.pics/svg/300x250/DEDEDE/555555/Drone%20Mini" alt="Drone Mini Compacto">
+                        </a>
+                        <div class="product-tag">Novo</div>
+                        <div class="product-actions">
+                            <button class="quick-view" title="Visualização Rápida"><i class="fas fa-eye"></i></button>
+                            <button class="add-to-wishlist" title="Adicionar aos Favoritos"><i class="far fa-heart"></i></button>
+                            <button class="compare" title="Comparar"><i class="fas fa-exchange-alt"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Mini Drones</div>
+                        <h3><a href="#">Drone Mini Compacto</a></h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(28)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">R$ 1.299,00</span>
+                        </div>
+                        <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <a href="#">
+                            <img src="https://placeholder.pics/svg/300x250/DEDEDE/555555/Drone%20Pro" alt="Drone Pro X700">
+                        </a>
+                        <div class="product-tag sale">-15%</div>
+                        <div class="product-actions">
+                            <button class="quick-view" title="Visualização Rápida"><i class="fas fa-eye"></i></button>
+                            <button class="add-to-wishlist" title="Adicionar aos Favoritos"><i class="far fa-heart"></i></button>
+                            <button class="compare" title="Comparar"><i class="fas fa-exchange-alt"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Drones Profissionais</div>
+                        <h3><a href="#">Drone Pro X700</a></h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(56)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="old-price">R$ 4.599,00</span>
+                            <span class="current-price">R$ 3.899,00</span>
+                        </div>
+                        <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <a href="#">
+                            <img src="https://placeholder.pics/svg/300x250/DEDEDE/555555/Drone%20Cam" alt="Drone Cam 8K">
+                        </a>
+                        <div class="product-tag">Destaque</div>
+                        <div class="product-actions">
+                            <button class="quick-view" title="Visualização Rápida"><i class="fas fa-eye"></i></button>
+                            <button class="add-to-wishlist" title="Adicionar aos Favoritos"><i class="far fa-heart"></i></button>
+                            <button class="compare" title="Comparar"><i class="fas fa-exchange-alt"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Drones com Câmera 4K</div>
+                        <h3><a href="#">Drone Cam 8K</a></h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(87)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">R$ 3.499,00</span>
+                        </div>
+                        <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Frete Grátis</h3>
+                        <p>Para compras acima de R$ 499,00</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Compra Segura</h3>
+                        <p>Seus dados protegidos</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Troca Garantida</h3>
+                        <p>7 dias para devolução</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Suporte Técnico</h3>
+                        <p>Especialistas à disposição</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>O Que Nossos Clientes Dizem</h2>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonials-track">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p>Comprei meu primeiro drone na DroneStore e fiquei impressionado com a qualidade do produto e o atendimento. Recomendo a todos os entusiastas!</p>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://placeholder.pics/svg/60/DEDEDE/555555/User" alt="Cliente">
+                            <div class="author-info">
+                                <h4>Carlos Silva</h4>
+                                <p>Fotógrafo</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p>Excelente variedade de produtos e preços competitivos. O suporte técnico me ajudou a escolher o drone perfeito para minhas necessidades.</p>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://placeholder.pics/svg/60/DEDEDE/555555/User" alt="Cliente">
+                            <div class="author-info">
+                                <h4>Ana Oliveira</h4>
+                                <p>Videomaker</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p>Entrega rápida e produto exatamente como descrito. Já é a terceira vez que compro na DroneStore e sempre saio satisfeito.</p>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://placeholder.pics/svg/60/DEDEDE/555555/User" alt="Cliente">
+                            <div class="author-info">
+                                <h4>Marcelo Santos</h4>
+                                <p>Engenheiro</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonials Slider Controls -->
+                <button class="testimonials-control prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="testimonials-control next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3>DroneStore</h3>
+                    <p>A maior loja especializada em drones do Brasil. Oferecemos produtos de alta qualidade para entusiastas e profissionais.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#">Sobre Nós</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos e Condições</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Categorias</h3>
+                    <ul>
+                        <li><a href="#">Drones Profissionais</a></li>
+                        <li><a href="#">Drones para Iniciantes</a></li>
+                        <li><a href="#">Drones de Corrida</a></li>
+                        <li><a href="#">Acessórios</a></li>
+                        <li><a href="#">Peças de Reposição</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contato</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Paulista, 1000 - São Paulo, SP</li>
+                        <li><i class="fas fa-phone"></i> (11) 5555-1234</li>
+                        <li><i class="fas fa-envelope"></i> contato@dronestore.com.br</li>
+                    </ul>
+                    <div class="newsletter">
+                        <h4>Assine nossa newsletter</h4>
+                        <form>
+                            <input type="email" placeholder="Seu e-mail">
+                            <button type="submit">Assinar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 DroneStore - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/home.js"></script>
+</body>
+</html>
