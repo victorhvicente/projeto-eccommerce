@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #d6efff;
+  --dark-color: #2c2c2c;
+  --light-color: #ffffff;
+  --success-color: #00e676;
+  --text-color: #2c2c2c;
+  --border-color: #e0e0e0;
+  --bg-color: #f8f9fa;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Tipografia base */
+html {
+    font-size: 62.5%; /* 1rem = 10px, facilita o uso de rem */
+    scroll-behavior: smooth;
+}
+
+body, html {
+    height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+header {
+  background-color: var(--light-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.logo h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 40px;
+}
+
+nav ul li a {
+  font-weight: 500;
+  transition: color 0.3s;
+  font-size: 1.6rem;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  color: var(--primary-color);
+}
+
