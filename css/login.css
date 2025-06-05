@@ -136,6 +136,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10rem;
 }
 
 .logo-img {
@@ -147,7 +148,7 @@ main {
 }
 
 .logo-img img {
-    max-width: 70%;
+    max-width: 100%;
     height: auto;
 }
 
