@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html lang="pt-br"> 
+<!DOCTYPE html> 
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AeroStore Login</title>
+    <title>Criar Conta</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="../assets/css/cadastro.css">
 </head>
 <body>
     <header>
@@ -27,36 +27,31 @@
             </div>
         </div>
     </header>
+     <main>
+        <section class="formulario">
+            <h1>CRIAR CONTA</h1>
+            <p>Preencha os campos abaixo para criar sua conta</p>
+            <form action="">
+                <label for="nomeCompleto">Nome completo</label>
+                <input type="text" name="nomeCompleto">
 
-    <main>
-        <div class="pai">
-            <section class="logo-img">
-                <img src="img/9993151.png" alt="Drone">
-                <h1>AeroStore</h1> 
-            </section>
+                <label for="email">E-mail</label>
+                <input type="text" name="email">
 
-            <section class="formulario">
-                <div class="nao-possui-conta">
-                    <p>não possui uma conta?</p>
-                    <a href="cadastro.html" class="botao-criar-conta">CRIAR CONTA</a>
-                </div>
-                <div class="acesse-sua-conta">
-                    <h2>ACESSE SUA CONTA</h2>
-                    <form action="index-home.html">
-                        <input type="text" placeholder="Email, CPF ou CNPJ">
-                        <input type="password" placeholder="Senha">
-                        <button type="submit">ENTRAR</button>
-                    </form>
+                <label for="telefone">Telefone</label>
+                <input type="text" name="telefone">
 
-                    <div class="esqueceu-senha">
-                        <a href="" class="link-esqueceu-senha">Esqueceu a senha?</a>
-                    </div>
+                <label for="senha">Senha</label>
+                <input type="password" name="senha">
 
-                </div>
-            </section>
-        </div>
+                <label for="confirmarSenha">Confirmar senha</label>
+                <input type="password" name="confirmarSenha">
+
+                <button type="submit">CADASTRAR</button>
+            </form>
+        </section>
     </main>
-
+   
     <footer>
         <div class="container">
             <div class="footer-columns">
@@ -100,7 +95,7 @@
                     <div class="newsletter">
                         <h4>Assine nossa newsletter</h4>
                         <form>
-                            <input  type="email" placeholder="Seu e-mail">
+                            <input type="email" placeholder="Seu e-mail">
                             <button type="submit">Assinar</button>
                         </form>
                     </div>
