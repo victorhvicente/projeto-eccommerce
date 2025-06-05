@@ -460,9 +460,11 @@
 .testimonial-author img {
     width: 60px;
     height: 60px;
+    object-fit: cover;
     border-radius: 50%;
     margin-right: 15px;
 }
+
 
 .author-info h4 {
     margin-bottom: 5px;
