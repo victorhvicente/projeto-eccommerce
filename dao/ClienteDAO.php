@@ -25,5 +25,21 @@ class ClienteDAO {
         ]);
     }
 
-    // Você pode adicionar métodos como buscarPorEmail(), listarTodos(), atualizar(), etc.
+    public function buscarPorEmail(string $email): ?Cliente {
+        $stmt = $this->pdo->prepare("SELECT * FROM clientes WHERE email = ?");
+        $stmt->execute([$email]);
+        $dados = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($dados) {
+            return new Cliente(
+                $dados['id_cliente'],
+                $dados['nome'],
+                $dados['email'],
+                $dados['telefone'],
+                $dados['senha']
+            );
+        }
+
+        return null;
+    }
 }

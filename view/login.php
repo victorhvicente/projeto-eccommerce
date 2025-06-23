@@ -42,9 +42,9 @@
                 </div>
                 <div class="acesse-sua-conta">
                     <h2>ACESSE SUA CONTA</h2>
-                    <form action="index-home.html">
-                        <input type="text" placeholder="Email, CPF ou CNPJ">
-                        <input type="password" placeholder="Senha">
+                    <form action="../router/routerLogin.php" method="post">
+                        <input type="text" name="identificador" placeholder="Email, CPF ou CNPJ">
+                        <input type="password" name="senha" placeholder="Senha">
                         <button type="submit">ENTRAR</button>
                     </form>
 

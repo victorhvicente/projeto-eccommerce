@@ -52,4 +52,39 @@ class ClienteController {
             }
         }
     }
+
+    public function login(): void {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $identificador = $_POST['identificador'] ?? '';
+            $senha = $_POST['senha'] ?? '';
+
+            if (empty($identificador) || empty($senha)) {
+                echo "Preencha todos os campos.";
+                return;
+            }
+
+            // Buscar o cliente por e-mail (ou CPF/CNPJ se for o caso futuramente)
+            $cliente = $this->clienteDAO->buscarPorEmail($identificador);
+
+            if (!$cliente) {
+                echo "Usuário não encontrado.";
+                return;
+            }
+
+            // Verifica a senha
+            if (password_verify($senha, $cliente->getSenha())) {
+                // Inicia a sessão e armazena dados do cliente
+                session_start();
+                $_SESSION['cliente_id'] = $cliente->getId();
+                $_SESSION['cliente_nome'] = $cliente->getNome();
+
+                // Redireciona para página principal
+                header("Location: ../view/index-home.php");
+                exit;
+
+            } else {
+                echo "Senha incorreta.";
+            }
+        }
+    }
 }
