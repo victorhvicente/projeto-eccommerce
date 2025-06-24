@@ -13,6 +13,8 @@ class ClienteController {
 
     public function criarConta(): void {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            session_start();
+
             $nome = $_POST['nomeCompleto'] ?? '';
             $email = $_POST['email'] ?? '';
             $telefone = $_POST['telefone'] ?? '';
@@ -21,23 +23,27 @@ class ClienteController {
 
             // Validações
             if (empty($nome) || empty($email) || empty($telefone) || empty($senha) || empty($confirmarSenha)) {
-                echo "Preencha todos os campos.";
-                return;
+                $_SESSION['mensagem'] = ['tipo' => 'erro', 'texto' => 'Preencha todos os campos.'];
+                header("Location: ../view/cadastro.php");
+                exit;
             }
 
             if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                echo "E-mail inválido.";
-                return;
+                $_SESSION['mensagem'] = ['tipo' => 'erro', 'texto' => 'E-mail inválido.'];
+                header("Location: ../view/cadastro.php");
+                exit;
             }
 
             if ($senha !== $confirmarSenha) {
-                echo "As senhas não coincidem.";
-                return;
+                $_SESSION['mensagem'] = ['tipo' => 'erro', 'texto' => 'As senhas não coincidem.'];
+                header("Location: ../view/cadastro.php");
+                exit;
             }
 
             if ($this->clienteDAO->emailExiste($email)) {
-                echo "Este e-mail já está cadastrado.";
-                return;
+                $_SESSION['mensagem'] = ['tipo' => 'erro', 'texto' => 'Este e-mail já está cadastrado.'];
+                header("Location: ../view/cadastro.php");
+                exit;
             }
 
             // Criar objeto Cliente
@@ -45,45 +51,48 @@ class ClienteController {
 
             // Salvar com o DAO
             if ($this->clienteDAO->inserir($cliente)) {
-                echo "Conta criada com sucesso!";
-                // header("Location: login.php");
+                $_SESSION['mensagem'] = ['tipo' => 'sucesso', 'texto' => 'Conta criada com sucesso!'];
+                header("Location: ../view/login.php");
+                exit;
             } else {
-                echo "Erro ao criar conta.";
+                $_SESSION['mensagem'] = ['tipo' => 'erro', 'texto' => 'Erro ao criar conta.'];
+                header("Location: ../view/cadastro.php");
+                exit;
             }
         }
     }
 
     public function login(): void {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            session_start();
+
             $identificador = $_POST['identificador'] ?? '';
             $senha = $_POST['senha'] ?? '';
 
             if (empty($identificador) || empty($senha)) {
-                echo "Preencha todos os campos.";
-                return;
+                $_SESSION['mensagem'] = ['tipo' => 'erro', 'texto' => 'Preencha todos os campos.'];
+                header("Location: ../view/login.php");
+                exit;
             }
 
-            // Buscar o cliente por e-mail (ou CPF/CNPJ se for o caso futuramente)
+            // Buscar o cliente por e-mail
             $cliente = $this->clienteDAO->buscarPorEmail($identificador);
 
             if (!$cliente) {
-                echo "Usuário não encontrado.";
-                return;
+                $_SESSION['mensagem'] = ['tipo' => 'erro', 'texto' => 'Usuário não encontrado.'];
+                header("Location: ../view/login.php");
+                exit;
             }
 
-            // Verifica a senha
             if (password_verify($senha, $cliente->getSenha())) {
-                // Inicia a sessão e armazena dados do cliente
-                session_start();
                 $_SESSION['cliente_id'] = $cliente->getId();
                 $_SESSION['cliente_nome'] = $cliente->getNome();
-
-                // Redireciona para página principal
                 header("Location: ../view/index-home.php");
                 exit;
-
             } else {
-                echo "Senha incorreta.";
+                $_SESSION['mensagem'] = ['tipo' => 'erro', 'texto' => 'Senha incorreta.'];
+                header("Location: ../view/login.php");
+                exit;
             }
         }
     }
