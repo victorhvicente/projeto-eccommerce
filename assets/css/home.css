@@ -176,6 +176,7 @@
     overflow: hidden;
     border-radius: 8px;
     height: 300px;
+    cursor: pointer;
 }
 
 .category-banner img {

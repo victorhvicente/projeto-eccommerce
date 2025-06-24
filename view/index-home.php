@@ -18,7 +18,7 @@
             <nav>
                 <ul>
                     <li><a href="#" class="active">Início</a></li>
-                    <li><a href="sessao-produtos.html">Produtos</a></li>
+                    <li><a href="../router/routerDrone.php">Produtos</a></li>
                 </ul>
             </nav>
             <div class="icons">
@@ -100,21 +100,21 @@
         <div class="container">
             <div class="banner-grid">
                 <div class="category-banner">
-                    <img src="../assets/img/DJI-Mavic-3-Pro.png" alt="Drones Profissionais">
+                    <img src="../assets/img/pro-drone-fpx8-2025.png" alt="Drones Profissionais">
                     <div class="banner-content">
                         <h3>Drones Profissionais</h3>
                         <a href="produtos.html" class="banner-link">Ver Coleção</a>
                     </div>
                 </div>
                 <div class="category-banner">
-                    <img src="../assets/img/DJI-Mini-4-Pro-Standard.jpg" alt="Mini Drones">
+                    <img src="../assets/img/mini-drone-pfx1.jpg" alt="Mini Drones">
                     <div class="banner-content">
                         <h3>Mini Drones</h3>
                         <a href="produtos.html" class="banner-link">Ver Coleção</a>
                     </div>
                 </div>
                 <div class="category-banner">
-                    <img src="../assets/img/Chimera7-Pro-V2-T1.png" alt="Drones de Corrida">
+                    <img src="../assets/img/corrida-pro-tbrz2024.png" alt="Drones de Corrida">
                     <div class="banner-content">
                         <h3>Drones de Corrida</h3>
                         <a href="produtos.html" class="banner-link">Ver Coleção</a>
@@ -137,7 +137,7 @@
                     <div class="product-card">
                         <div class="product-image">
                             <a href="#">
-                                <img src="../assets/img/DJI-Mavic-3-Pro.png" alt="Drone DJI Mavic 3 Pro">
+                                <img src="../assets/img/pro-drone-fpx8-2025.png" alt="Drone DJI Mavic 3 Pro">
                             </a>
                             <div class="product-tag">Bestseller</div>
                             <div class="product-actions">
@@ -148,7 +148,7 @@
                         </div>
                         <div class="product-info">
                             <div class="product-category">Drones Profissionais</div>
-                            <h3><a href="#">DJI Mavic 3 Pro</a></h3>
+                            <h3><a href="#">Falcon Pro X8</a></h3>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -158,8 +158,8 @@
                                 <span>(42)</span>
                             </div>
                             <div class="product-price">
-                                <span class="old-price">R$ 11.831,99</span>
-                                <span class="current-price">R$ 8.289,99</span>
+                                <span class="old-price">R$ 14.999,99</span>
+                                <span class="current-price">R$ 12.999,99</span>
                             </div>
                             <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
                         </div>
@@ -169,7 +169,7 @@
                     <div class="product-card">
                         <div class="product-image">
                             <a href="#">
-                                <img src="../assets/img/DJI-Mini-4-Pro-Standard.jpg" alt="DJI Mini 4 Pro Standard">
+                                <img src="../assets/img/mini-drone-pfx1.jpg" alt="DJI Mini 4 Pro Standard">
                             </a>
                             <div class="product-tag">Novo</div>
                             <div class="product-actions">
@@ -180,7 +180,7 @@
                         </div>
                         <div class="product-info">
                             <div class="product-category">Mini Drones</div>
-                            <h3><a href="#">DJI Mini 4 Pro Standard</a></h3>
+                            <h3><a href="#">Mini Swift 200</a></h3>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -190,7 +190,7 @@
                                 <span>(28)</span>
                             </div>
                             <div class="product-price">
-                                <span class="current-price">R$ 8.299,99</span>
+                                <span class="current-price">R$ 799,99</span>
                             </div>
                             <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
                         </div>
@@ -200,7 +200,7 @@
                     <div class="product-card">
                         <div class="product-image">
                             <a href="#">
-                                <img src="../assets/img/DJI-Phantom-4.png" alt="DJI Phantom 4">
+                                <img src="../assets/img/pro-drone-ormx2.jpg" alt="DJI Phantom 4">
                             </a>
                             <div class="product-tag sale">-15%</div>
                             <div class="product-actions">
@@ -211,7 +211,7 @@
                         </div>
                         <div class="product-info">
                             <div class="product-category">Drones Profissionais</div>
-                            <h3><a href="#">DJI Phantom 4 Pro V2.0</a></h3>
+                            <h3><a href="#">Oriom Max 2.0</a></h3>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -221,8 +221,8 @@
                                 <span>(56)</span>
                             </div>
                             <div class="product-price">
-                                <span class="old-price">R$ 22.213,89</span>
-                                <span class="current-price">R$ 18.881.81</span>
+                                <span class="old-price">R$ 10.999.99</span>
+                                <span class="current-price">R$ 9.349.99</span>
                             </div>
                             <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
                         </div>
@@ -232,7 +232,7 @@
                     <div class="product-card">
                         <div class="product-image">
                             <a href="#">
-                                <img src="../assets/img/X8-Pro-Max-O4-M1.png" alt="Taurus X8 Pro Max 8S HD Cinelifter">
+                                <img src="../assets/img/corrida-drone-vfs-9.png" alt="Taurus X8 Pro Max 8S HD Cinelifter">
                             </a>
                             <div class="product-actions">
                                 <button class="quick-view" title="Visualização Rápida"><i class="fas fa-eye"></i></button>
@@ -242,7 +242,7 @@
                         </div>
                         <div class="product-info">
                             <div class="product-category">Drones de Corrida</div>
-                            <h3><a href="#">Taurus X8 Pro Max 8S HD Cinelifter</a></h3>
+                            <h3><a href="#">Velocity FireStorm</a></h3>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -252,7 +252,7 @@
                                 <span>(19)</span>
                             </div>
                             <div class="product-price">
-                                <span class="current-price">R$ 19.959,99</span>
+                                <span class="current-price">R$ 2.499,99</span>
                             </div>
                             <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
                         </div>
@@ -262,7 +262,7 @@
                     <div class="product-card">
                         <div class="product-image">
                             <a href="#">
-                                <img src="../assets/img/drone-dji-agras-t20p.jpg" alt="DJI T20P">
+                                <img src="../assets/img/pro-drone-tvu500.jpg" alt="DJI T20P">
                             </a>
                             <div class="product-tag">Destaque</div>
                             <div class="product-actions">
@@ -272,8 +272,8 @@
                             </div>
                         </div>
                         <div class="product-info">
-                            <div class="product-category">Drones Pulverizador</div>
-                            <h3><a href="#">DJI T20P</a></h3>
+                            <div class="product-category">Drones Profissionais</div>
+                            <h3><a href="#">TitanVision Ultra</a></h3>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -283,7 +283,7 @@
                                 <span>(87)</span>
                             </div>
                             <div class="product-price">
-                                <span class="current-price">R$ 59.999,99</span>
+                                <span class="current-price">R$ 14.999,99</span>
                             </div>
                             <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
                         </div>
