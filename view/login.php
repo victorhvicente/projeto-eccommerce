@@ -91,7 +91,58 @@ session_start();
     </main>
 
     <footer>
-        <!-- Rodapé permanece igual -->
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3>DroneStore</h3>
+                    <p>A maior loja especializada em drones do Brasil. Oferecemos produtos de alta qualidade para entusiastas e profissionais.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#">Sobre Nós</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos e Condições</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Categorias</h3>
+                    <ul>
+                        <li><a href="#">Drones Profissionais</a></li>
+                        <li><a href="#">Drones para Iniciantes</a></li>
+                        <li><a href="#">Drones de Corrida</a></li>
+                        <li><a href="#">Acessórios</a></li>
+                        <li><a href="#">Peças de Reposição</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contato</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Paulista, 1000 - São Paulo, SP</li>
+                        <li><i class="fas fa-phone"></i> (11) 5555-1234</li>
+                        <li><i class="fas fa-envelope"></i> contato@dronestore.com.br</li>
+                    </ul>
+                    <div class="newsletter">
+                        <h4>Assine nossa newsletter</h4>
+                        <form>
+                            <input type="email" placeholder="Seu e-mail">
+                            <button type="submit">Assinar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 DroneStore - Todos os direitos reservados</p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
