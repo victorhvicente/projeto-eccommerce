@@ -44,7 +44,7 @@ session_start();
             </div>
             <nav>
                 <ul>
-                    <li><a href="index-home.php">Início</a></li>
+                    <li><a href="../router/routerHome.php">Início</a></li>
                     <li><a href="../router/routerDrone.php">Produtos</a></li>
                 </ul>
             </nav>

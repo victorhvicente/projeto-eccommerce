@@ -25,8 +25,8 @@ $tipoSelecionado = $_GET['tipo'] ?? 'todos';
             </div>
             <nav>
                 <ul>
-                    <li><a href="../view/index-home.php">Início</a></li>
-                    <li><a href="../router/routerDrone.php" class="active">Produtos</a></li>
+                    <li><a href="../router/routerHome.php">Início</a></li>
+                    <li><a href="../router/routerDrone.php"  class="active">Produtos</a></li>
                 </ul>
             </nav>
             <div class="icons">
