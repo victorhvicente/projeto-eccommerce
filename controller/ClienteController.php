@@ -87,7 +87,7 @@ class ClienteController {
             if (password_verify($senha, $cliente->getSenha())) {
                 $_SESSION['cliente_id'] = $cliente->getId();
                 $_SESSION['cliente_nome'] = $cliente->getNome();
-                header("Location: ../view/index-home.php");
+                header("Location: ../router/routerHome.php");
                 exit;
             } else {
                 $_SESSION['mensagem'] = ['tipo' => 'erro', 'texto' => 'Senha incorreta.'];

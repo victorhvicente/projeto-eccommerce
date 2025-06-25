@@ -172,18 +172,6 @@
         </div>
     </section>
 
-    <!-- Promo Banner -->
-    <section class="promo-banner">
-        <div class="container">
-            <div class="promo-content">
-                <h2>Oferta Especial</h2>
-                <h3>Até 30% de desconto em drones selecionados</h3>
-                <p>Promoção válida por tempo limitado. Aproveite!</p>
-                <a href="produtos.html" class="btn btn-primary">Ver Ofertas</a>
-            </div>
-        </div>
-    </section>
-
     <!-- Best Sellers -->
     <section class="best-sellers">
         <div class="container">
