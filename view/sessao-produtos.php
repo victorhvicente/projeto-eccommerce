@@ -1,12 +1,13 @@
 <?php
-    require_once '../controller/DroneController.php';
-    session_start();
-    $clienteLogado = isset($_SESSION['cliente_id']);
-    $tipoSelecionado = $_GET['tipo'] ?? 'todos';
+require_once '../controller/DroneController.php';
+session_start();
+$clienteLogado = isset($_SESSION['cliente_id']);
+$tipoSelecionado = $_GET['tipo'] ?? 'todos';
 ?>
 
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -24,7 +26,7 @@
             <nav>
                 <ul>
                     <li><a href="../view/index-home.php">Início</a></li>
-                    <li><a href="../router/routerDrone.php"  class="active">Produtos</a></li>
+                    <li><a href="../router/routerDrone.php" class="active">Produtos</a></li>
                 </ul>
             </nav>
             <div class="icons">
@@ -148,13 +150,13 @@
             </div>
         </div>
     </footer>
-    
+
     <script>
         const tipoInicial = '<?= strtolower($tipoSelecionado) ?>';
-    </script>                
+    </script>
     <script src="../assets/js/sessao-produtos.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function() {
             const botoesComprar = document.querySelectorAll('.card button');
             const contadorCarrinho = document.querySelector('.cart-count');
             let totalCarrinho = 0;
@@ -162,7 +164,7 @@
             const clienteLogado = <?= json_encode($clienteLogado) ?>;
 
             botoesComprar.forEach(botao => {
-                botao.addEventListener('click', function () {
+                botao.addEventListener('click', function() {
                     if (!clienteLogado) {
                         alert('Faça login para adicionar produtos ao carrinho!');
                         return;
@@ -175,6 +177,7 @@
             });
         });
     </script>
-    
+
 </body>
+
 </html>

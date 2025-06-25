@@ -3,15 +3,18 @@ require_once '../model/Cliente.php';
 require_once '../dao/ClienteDAO.php';
 require_once '../config/conexao.php';
 
-class ClienteController {
+class ClienteController
+{
     private ClienteDAO $clienteDAO;
 
-    public function __construct() {
+    public function __construct()
+    {
         global $pdo;
         $this->clienteDAO = new ClienteDAO($pdo);
     }
 
-    public function criarConta(): void {
+    public function criarConta(): void
+    {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             session_start();
 
@@ -62,7 +65,8 @@ class ClienteController {
         }
     }
 
-    public function login(): void {
+    public function login(): void
+    {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             session_start();
 

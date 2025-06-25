@@ -2,14 +2,17 @@
 require_once '../model/Drone.php';
 require_once '../config/conexao.php';
 
-class DroneDAO {
+class DroneDAO
+{
     private PDO $pdo;
 
-    public function __construct(PDO $pdo) {
+    public function __construct(PDO $pdo)
+    {
         $this->pdo = $pdo;
     }
 
-    public function listarTodos(): array {
+    public function listarTodos(): array
+    {
         $stmt = $this->pdo->query("SELECT * FROM drones");
         $dados = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -26,14 +29,15 @@ class DroneDAO {
                 $linha['preco_antigo'],
                 $linha['estoque'],
                 $linha['peso'],
-                $linha['imagem'], 
+                $linha['imagem'],
                 $linha['numero_vendas']
             );
         }
         return $drones;
     }
 
-    public function listarMaisVendidos($limite) {
+    public function listarMaisVendidos($limite)
+    {
         $sql = "SELECT * FROM drones ORDER BY numero_vendas DESC LIMIT :limite";
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindValue(':limite', $limite, PDO::PARAM_INT);
@@ -52,14 +56,15 @@ class DroneDAO {
                 $linha['preco_antigo'],
                 $linha['estoque'],
                 $linha['peso'],
-                $linha['imagem'], 
+                $linha['imagem'],
                 $linha['numero_vendas']
             );
         }
         return $maisVendidos;
     }
 
-    public function listarDestaques() {
+    public function listarDestaques()
+    {
         $sql = "SELECT * FROM drones WHERE destaque = :destaque";
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindValue(':destaque', 'sim', PDO::PARAM_STR);
@@ -78,7 +83,7 @@ class DroneDAO {
                 $linha['preco_antigo'],
                 $linha['estoque'],
                 $linha['peso'],
-                $linha['imagem'], 
+                $linha['imagem'],
                 $linha['numero_vendas']
             );
         }

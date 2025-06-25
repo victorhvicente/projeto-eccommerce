@@ -2,7 +2,8 @@
 session_start();
 ?>
 <!DOCTYPE html>
-<html lang="pt-br"> 
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,11 +21,13 @@ session_start();
             font-weight: 500;
             text-align: center;
         }
+
         .mensagem.sucesso {
             background-color: #d4edda;
             color: #155724;
             border: 1px solid #c3e6cb;
         }
+
         .mensagem.erro {
             background-color: #f8d7da;
             color: #721c24;
@@ -32,6 +35,7 @@ session_start();
         }
     </style>
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -51,7 +55,7 @@ session_start();
         <div class="pai">
             <section class="logo-img">
                 <img src="../assets/img/9993151.png" alt="Drone">
-                <h1>AeroStore</h1> 
+                <h1>AeroStore</h1>
             </section>
 
             <section class="formulario">
@@ -140,4 +144,5 @@ session_start();
         </div>
     </footer>
 </body>
+
 </html>

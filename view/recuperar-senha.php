@@ -23,13 +23,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Recuperar Senha</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/recuperar.css">
+    <link rel="stylesheet" href="../assets/css/recuperar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -65,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </form>
                 <?= $mensagem ?>
                 <div class="voltar-login">
-                    <a href="login.html">Voltar para o Login</a>
+                    <a href="../view/login.php">Voltar para o Login</a>
                 </div>
             </div>
         </div>
@@ -126,4 +128,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </footer>
 </body>
+
 </html>
