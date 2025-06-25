@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    $clienteLogado = isset($_SESSION['cliente_id']);
+?>
 <!DOCTYPE html> 
 <html lang="pt-br">
 <head>
@@ -13,7 +17,7 @@
     <header>
         <div class="container">
             <div class="logo">
-                <h1>DroneStore</h1>
+                <h1>AeroStore</h1>
             </div>
             <nav>
                 <ul>
@@ -22,7 +26,6 @@
                 </ul>
             </nav>
             <div class="icons">
-                <a href="#"><i class="fas fa-search"></i></a>
                 <a href="#"><i class="fas fa-user"></i></a>
                 <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
             </div>
@@ -41,7 +44,7 @@
                                 <h2>Drones Profissionais</h2>
                                 <p>Descubra nossa linha premium de drones para fotografia e filmagem profissional</p>
                                 <div class="slide-buttons">
-                                    <a href="produtos.html" class="btn btn-primary">Ver Produtos</a>
+                                    <a href="../router/routerDrone.php?tipo=profissional" class="btn btn-primary">Ver Produtos</a>
                                     <a href="#" class="btn btn-secondary">Saiba Mais</a>
                                 </div>
                             </div>
@@ -57,7 +60,7 @@
                                 <h2>Drones de Corrida</h2>
                                 <p>Velocidade e adrenalina com nossos drones de alta performance para competições</p>
                                 <div class="slide-buttons">
-                                    <a href="produtos.html" class="btn btn-primary">Ver Produtos</a>
+                                    <a href="../router/routerDrone.php?tipo=corrida" class="btn btn-primary">Ver Produtos</a>
                                     <a href="#" class="btn btn-secondary">Saiba Mais</a>
                                 </div>
                             </div>
@@ -70,10 +73,10 @@
                     <div class="slide-image" style="background-image: url('https://placeholder.pics/svg/1600x600/DEDEDE/555555/Drone%20Iniciante');">
                         <div class="container">
                             <div class="slide-content">
-                                <h2>Drones para Iniciantes</h2>
+                                <h2>Mini Drones</h2>
                                 <p>Comece sua jornada no mundo dos drones com modelos fáceis de pilotar</p>
                                 <div class="slide-buttons">
-                                    <a href="produtos.html" class="btn btn-primary">Ver Produtos</a>
+                                    <a href="../router/routerDrone.php?tipo=mini" class="btn btn-primary">Ver Produtos</a>
                                     <a href="#" class="btn btn-secondary">Saiba Mais</a>
                                 </div>
                             </div>
@@ -103,21 +106,21 @@
                     <img src="../assets/img/pro-drone-fpx8-2025.png" alt="Drones Profissionais">
                     <div class="banner-content">
                         <h3>Drones Profissionais</h3>
-                        <a href="produtos.html" class="banner-link">Ver Coleção</a>
+                        <a href="../router/routerDrone.php?tipo=profissional" class="banner-link">Ver Coleção</a>
                     </div>
                 </div>
                 <div class="category-banner">
                     <img src="../assets/img/mini-drone-pfx1.jpg" alt="Mini Drones">
                     <div class="banner-content">
                         <h3>Mini Drones</h3>
-                        <a href="produtos.html" class="banner-link">Ver Coleção</a>
+                        <a href="../router/routerDrone.php?tipo=mini" class="banner-link">Ver Coleção</a>
                     </div>
                 </div>
                 <div class="category-banner">
                     <img src="../assets/img/corrida-pro-tbrz2024.png" alt="Drones de Corrida">
                     <div class="banner-content">
                         <h3>Drones de Corrida</h3>
-                        <a href="produtos.html" class="banner-link">Ver Coleção</a>
+                        <a href="../router/routerDrone.php?tipo=corrida" class="banner-link">Ver Coleção</a>
                     </div>
                 </div>
             </div>
@@ -133,161 +136,33 @@
             </div>
             <div class="products-slider">
                 <div class="products-track">
-                    <!-- Product 1 -->
-                    <div class="product-card">
-                        <div class="product-image">
-                            <a href="#">
-                                <img src="../assets/img/pro-drone-fpx8-2025.png" alt="Drone DJI Mavic 3 Pro">
-                            </a>
-                            <div class="product-tag">Bestseller</div>
-                            <div class="product-actions">
-                                <button class="quick-view" title="Visualização Rápida"><i class="fas fa-eye"></i></button>
-                                <button class="add-to-wishlist" title="Adicionar aos Favoritos"><i class="far fa-heart"></i></button>
-                                <button class="compare" title="Comparar"><i class="fas fa-exchange-alt"></i></button>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-category">Drones Profissionais</div>
-                            <h3><a href="#">Falcon Pro X8</a></h3>
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <span>(42)</span>
-                            </div>
-                            <div class="product-price">
-                                <span class="old-price">R$ 14.999,99</span>
-                                <span class="current-price">R$ 12.999,99</span>
-                            </div>
-                            <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
-                        </div>
-                    </div>
-                    
-                    <!-- Product 2 -->
-                    <div class="product-card">
-                        <div class="product-image">
-                            <a href="#">
-                                <img src="../assets/img/mini-drone-pfx1.jpg" alt="DJI Mini 4 Pro Standard">
-                            </a>
-                            <div class="product-tag">Novo</div>
-                            <div class="product-actions">
-                                <button class="quick-view" title="Visualização Rápida"><i class="fas fa-eye"></i></button>
-                                <button class="add-to-wishlist" title="Adicionar aos Favoritos"><i class="far fa-heart"></i></button>
-                                <button class="compare" title="Comparar"><i class="fas fa-exchange-alt"></i></button>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-category">Mini Drones</div>
-                            <h3><a href="#">Mini Swift 200</a></h3>
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <span>(28)</span>
-                            </div>
-                            <div class="product-price">
-                                <span class="current-price">R$ 799,99</span>
-                            </div>
-                            <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
-                        </div>
-                    </div>
-                    
-                    <!-- Product 3 -->
-                    <div class="product-card">
-                        <div class="product-image">
-                            <a href="#">
-                                <img src="../assets/img/pro-drone-ormx2.jpg" alt="DJI Phantom 4">
-                            </a>
-                            <div class="product-tag sale">-15%</div>
-                            <div class="product-actions">
-                                <button class="quick-view" title="Visualização Rápida"><i class="fas fa-eye"></i></button>
-                                <button class="add-to-wishlist" title="Adicionar aos Favoritos"><i class="far fa-heart"></i></button>
-                                <button class="compare" title="Comparar"><i class="fas fa-exchange-alt"></i></button>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-category">Drones Profissionais</div>
-                            <h3><a href="#">Oriom Max 2.0</a></h3>
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <span>(56)</span>
-                            </div>
-                            <div class="product-price">
-                                <span class="old-price">R$ 10.999.99</span>
-                                <span class="current-price">R$ 9.349.99</span>
-                            </div>
-                            <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
-                        </div>
-                    </div>
-                    
-                    <!-- Product 4 -->
-                    <div class="product-card">
-                        <div class="product-image">
-                            <a href="#">
-                                <img src="../assets/img/corrida-drone-vfs-9.png" alt="Taurus X8 Pro Max 8S HD Cinelifter">
-                            </a>
-                            <div class="product-actions">
-                                <button class="quick-view" title="Visualização Rápida"><i class="fas fa-eye"></i></button>
-                                <button class="add-to-wishlist" title="Adicionar aos Favoritos"><i class="far fa-heart"></i></button>
-                                <button class="compare" title="Comparar"><i class="fas fa-exchange-alt"></i></button>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-category">Drones de Corrida</div>
-                            <h3><a href="#">Velocity FireStorm</a></h3>
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <span>(19)</span>
-                            </div>
-                            <div class="product-price">
-                                <span class="current-price">R$ 2.499,99</span>
-                            </div>
-                            <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
-                        </div>
-                    </div>
                     
                     <!-- Product 5 -->
-                    <div class="product-card">
-                        <div class="product-image">
-                            <a href="#">
-                                <img src="../assets/img/pro-drone-tvu500.jpg" alt="DJI T20P">
-                            </a>
-                            <div class="product-tag">Destaque</div>
-                            <div class="product-actions">
-                                <button class="quick-view" title="Visualização Rápida"><i class="fas fa-eye"></i></button>
-                                <button class="add-to-wishlist" title="Adicionar aos Favoritos"><i class="far fa-heart"></i></button>
-                                <button class="compare" title="Comparar"><i class="fas fa-exchange-alt"></i></button>
+                    <?php foreach ($destaques as $drone): ?>
+                        <div class="product-card">
+                            <div class="product-image">
+                                <a href="#">
+                                    <img src="../assets/img/<?= htmlspecialchars($drone->getImagem()) ?>" alt="<?= htmlspecialchars($drone->getNome()) ?>">
+                                </a>
+                                <div class="product-tag">Destaque</div>
+                                <div class="product-actions">
+                                    <button class="quick-view" title="Visualização Rápida"><i class="fas fa-eye"></i></button>
+                                    <button class="add-to-wishlist" title="Adicionar aos Favoritos"><i class="far fa-heart"></i></button>
+                                    <button class="compare" title="Comparar"><i class="fas fa-exchange-alt"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category"><?= ucfirst($drone->getTipo()) ?></div>
+                                <h3><a href="#"><?= htmlspecialchars($drone->getNome()) ?></a></h3>
+                                <div class="product-price">
+                                    <span class="old-price">R$ <?= number_format($drone->getPrecoAntigo(), 2, ',', '.') ?></span>
+                                    <span class="current-price">R$ <?= number_format($drone->getPreco(), 2, ',', '.') ?></span>
+                                </div>
+                                <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
                             </div>
                         </div>
-                        <div class="product-info">
-                            <div class="product-category">Drones Profissionais</div>
-                            <h3><a href="#">TitanVision Ultra</a></h3>
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <span>(87)</span>
-                            </div>
-                            <div class="product-price">
-                                <span class="current-price">R$ 14.999,99</span>
-                            </div>
-                            <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
+
                 </div>
                 
                 <!-- Products Slider Controls -->
@@ -314,196 +189,35 @@
         <div class="container">
             <div class="section-header">
                 <h2>Mais Vendidos</h2>
-                <a href="produtos.html" class="view-all">Ver Todos <i class="fas fa-arrow-right"></i></a>
+                <a href="../router/routerDrone.php" class="view-all">Ver Todos <i class="fas fa-arrow-right"></i></a>
             </div>
             <div class="products-grid">
-                <!-- Product 1 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <a href="#">
-                            <img src="https://placeholder.pics/svg/300x250/DEDEDE/555555/Drone%20X500" alt="Drone Profissional X500">
-                        </a>
-                        <div class="product-tag">Bestseller</div>
-                        <div class="product-actions">
-                            <button class="quick-view" title="Visualização Rápida"><i class="fas fa-eye"></i></button>
-                            <button class="add-to-wishlist" title="Adicionar aos Favoritos"><i class="far fa-heart"></i></button>
-                            <button class="compare" title="Comparar"><i class="fas fa-exchange-alt"></i></button>
+                <?php foreach ($maisVendidos as $drone): ?>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <a href="#">
+                                <img src="../assets/img/<?= htmlspecialchars($drone->getImagem()) ?>" alt="<?= htmlspecialchars($drone->getNome()) ?>">
+                            </a>
+                            <div class="product-tag"><?= $drone->getPrecoAntigo() ? 'Promoção' : 'Bestseller' ?></div>
+                            <div class="product-actions">
+                                <button class="quick-view"><i class="fas fa-eye"></i></button>
+                                <button class="add-to-wishlist"><i class="far fa-heart"></i></button>
+                                <button class="compare"><i class="fas fa-exchange-alt"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category"><?= ucfirst($drone->getTipo()) ?></div>
+                            <h3><a href="#"><?= htmlspecialchars($drone->getNome()) ?></a></h3>
+                            <div class="product-price">
+                                <?php if ($drone->getPrecoAntigo()): ?>
+                                    <span class="old-price">R$ <?= number_format($drone->getPrecoAntigo(), 2, ',', '.') ?></span>
+                                <?php endif; ?>
+                                <span class="current-price">R$ <?= number_format($drone->getPreco(), 2, ',', '.') ?></span>
+                            </div>
+                            <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
                         </div>
                     </div>
-                    <div class="product-info">
-                        <div class="product-category">Drones Profissionais</div>
-                        <h3><a href="#">Drone Profissional X500</a></h3>
-                        <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            <span>(42)</span>
-                        </div>
-                        <div class="product-price">
-                            <span class="old-price">R$ 3.999,00</span>
-                            <span class="current-price">R$ 2.899,00</span>
-                        </div>
-                        <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
-                    </div>
-                </div>
-                
-                <!-- Product 2 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <a href="#">
-                            <img src="https://placeholder.pics/svg/300x250/DEDEDE/555555/Drone%20Mini" alt="Drone Mini Compacto">
-                        </a>
-                        <div class="product-tag">Novo</div>
-                        <div class="product-actions">
-                            <button class="quick-view" title="Visualização Rápida"><i class="fas fa-eye"></i></button>
-                            <button class="add-to-wishlist" title="Adicionar aos Favoritos"><i class="far fa-heart"></i></button>
-                            <button class="compare" title="Comparar"><i class="fas fa-exchange-alt"></i></button>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-category">Mini Drones</div>
-                        <h3><a href="#">Drone Mini Compacto</a></h3>
-                        <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <span>(28)</span>
-                        </div>
-                        <div class="product-price">
-                            <span class="current-price">R$ 1.299,00</span>
-                        </div>
-                        <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
-                    </div>
-                </div>
-                
-                <!-- Product 3 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <a href="#">
-                            <img src="https://placeholder.pics/svg/300x250/DEDEDE/555555/Drone%20Pro" alt="Drone Pro X700">
-                        </a>
-                        <div class="product-tag sale">-15%</div>
-                        <div class="product-actions">
-                            <button class="quick-view" title="Visualização Rápida"><i class="fas fa-eye"></i></button>
-                            <button class="add-to-wishlist" title="Adicionar aos Favoritos"><i class="far fa-heart"></i></button>
-                            <button class="compare" title="Comparar"><i class="fas fa-exchange-alt"></i></button>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-category">Drones Profissionais</div>
-                        <h3><a href="#">Drone Pro X700</a></h3>
-                        <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            <span>(56)</span>
-                        </div>
-                        <div class="product-price">
-                            <span class="old-price">R$ 4.599,00</span>
-                            <span class="current-price">R$ 3.899,00</span>
-                        </div>
-                        <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
-                    </div>
-                </div>
-                
-                <!-- Product 4 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <a href="#">
-                            <img src="https://placeholder.pics/svg/300x250/DEDEDE/555555/Drone%20Cam" alt="Drone Cam 8K">
-                        </a>
-                        <div class="product-tag">Destaque</div>
-                        <div class="product-actions">
-                            <button class="quick-view" title="Visualização Rápida"><i class="fas fa-eye"></i></button>
-                            <button class="add-to-wishlist" title="Adicionar aos Favoritos"><i class="far fa-heart"></i></button>
-                            <button class="compare" title="Comparar"><i class="fas fa-exchange-alt"></i></button>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-category">Drones com Câmera 4K</div>
-                        <h3><a href="#">Drone Cam 8K</a></h3>
-                        <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <span>(87)</span>
-                        </div>
-                        <div class="product-price">
-                            <span class="current-price">R$ 3.499,00</span>
-                        </div>
-                        <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
-                    </div>
-                </div>
-
-                 <!-- Product 5 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <a href="#">
-                            <img src="https://placeholder.pics/svg/300x250/DEDEDE/555555/Drone%20Cam" alt="Drone Cam 8K">
-                        </a>
-                        <div class="product-tag">Destaque</div>
-                        <div class="product-actions">
-                            <button class="quick-view" title="Visualização Rápida"><i class="fas fa-eye"></i></button>
-                            <button class="add-to-wishlist" title="Adicionar aos Favoritos"><i class="far fa-heart"></i></button>
-                            <button class="compare" title="Comparar"><i class="fas fa-exchange-alt"></i></button>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-category">Drones com Câmera 4K</div>
-                        <h3><a href="#">Drone Cam 8K</a></h3>
-                        <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <span>(87)</span>
-                        </div>
-                        <div class="product-price">
-                            <span class="current-price">R$ 3.499,00</span>
-                        </div>
-                        <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
-                    </div>
-                </div>
-                
-                 <!-- Product 6 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <a href="#">
-                            <img src="https://placeholder.pics/svg/300x250/DEDEDE/555555/Drone%20Cam" alt="Drone Cam 8K">
-                        </a>
-                        <div class="product-tag">Destaque</div>
-                        <div class="product-actions">
-                            <button class="quick-view" title="Visualização Rápida"><i class="fas fa-eye"></i></button>
-                            <button class="add-to-wishlist" title="Adicionar aos Favoritos"><i class="far fa-heart"></i></button>
-                            <button class="compare" title="Comparar"><i class="fas fa-exchange-alt"></i></button>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-category">Drones com Câmera 4K</div>
-                        <h3><a href="#">Drone Cam 8K</a></h3>
-                        <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <span>(87)</span>
-                        </div>
-                        <div class="product-price">
-                            <span class="current-price">R$ 3.499,00</span>
-                        </div>
-                        <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </section>
@@ -696,5 +410,27 @@
     </footer>
 
     <script src="/js/home.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        const botoesComprar = document.querySelectorAll('.add-to-cart-btn');
+        const contadorCarrinho = document.querySelector('.cart-count');
+        let totalCarrinho = 0;
+
+        const clienteLogado = <?= json_encode($clienteLogado) ?>;
+
+        botoesComprar.forEach(botao => {
+            botao.addEventListener('click', function () {
+                if (!clienteLogado) {
+                    alert('Faça login para adicionar produtos ao carrinho!');
+                    return;
+                }
+
+                alert('Produto adicionado ao carrinho!');
+                totalCarrinho++;
+                contadorCarrinho.textContent = totalCarrinho;
+            });
+        });
+    });
+    </script>
 </body>
 </html>

@@ -9,9 +9,11 @@ class Drone {
         private string $marca,
         private string $descricao,
         private float $preco,
+        private float $precoAntigo,
         private int $estoque,
         private float $peso,
-        private string $imagem
+        private string $imagem,
+        private int $numeroVendas
     ){}
 
     public function getId(): int {
@@ -42,6 +44,10 @@ class Drone {
         return $this->preco;
     }
 
+    public function getPrecoAntigo(): float {
+        return $this->precoAntigo;
+    }
+
     public function getEstoque(): int {
         return $this->estoque;
     }
@@ -52,5 +58,9 @@ class Drone {
 
     public function getImagem(): string {
         return $this->imagem;
+    }
+
+    public function getNumeroVendas(): int {
+        return $this->numeroVendas;
     }
 }

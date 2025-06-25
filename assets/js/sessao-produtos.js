@@ -1,51 +1,40 @@
-//Filtro funcional
+// Filtro funcional
 document.addEventListener('DOMContentLoaded', function () {
     const filtro = document.getElementById('filtro-tipo');
+    const busca = document.querySelector('.busca');
     const cards = document.querySelectorAll('.card');
     const contador = document.getElementById('contador-produtos');
 
-    //Total de produtos sendo mostrado
-    function atualizarContador() {
+    function atualizarVisibilidade() {
+        const tipoSelecionado = filtro.value;
+        const termoBusca = busca.value.trim().toLowerCase();
         let visiveis = 0;
-        cards.forEach(card => {
-            if (!card.classList.contains('oculto')) {
-                visiveis++;
-            }
-        });
-        contador.textContent = visiveis;
-    }
-
-    filtro.addEventListener('change', function () {
-        const tipoSelecionado = this.value;
 
         cards.forEach(card => {
             const tipoDrone = card.getAttribute('data-tipo');
+            const nomeDrone = card.querySelector('.descricao-produto')?.textContent.toLowerCase();
 
-            if (tipoSelecionado === 'todos' || tipoDrone === tipoSelecionado) {
+            const correspondeTipo = tipoSelecionado === 'todos' || tipoDrone === tipoSelecionado;
+            const correspondeBusca = nomeDrone.includes(termoBusca);
+
+            if (correspondeTipo && correspondeBusca) {
                 card.classList.remove('oculto');
+                visiveis++;
             } else {
                 card.classList.add('oculto');
             }
         });
 
-        atualizarContador();
-    });
+        contador.textContent = visiveis;
+    }
 
-    // Atualiza o número na primeira carga da página
-    atualizarContador();
-});
+    // Agora tipoInicial vem do PHP inline
+    if (tipoInicial) {
+        filtro.value = tipoInicial;
+    }
 
-//Acrescentar +1 no contador do carrinho
-document.addEventListener('DOMContentLoaded', function () {
-    const botoesComprar = document.querySelectorAll('.card button');
-    const contadorCarrinho = document.querySelector('.cart-count');
-    let totalCarrinho = 0;
+    atualizarVisibilidade();
 
-    botoesComprar.forEach(botao => {
-        botao.addEventListener('click', function () {
-            alert('Produto adicionado ao carrinho!');
-            totalCarrinho++;
-            contadorCarrinho.textContent = totalCarrinho;
-        });
-    });
+    filtro.addEventListener('change', atualizarVisibilidade);
+    busca.addEventListener('input', atualizarVisibilidade);
 });

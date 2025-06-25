@@ -14,4 +14,10 @@ class DroneController {
         $drones = $this->droneDAO->listarTodos();
         require_once '../view/sessao-produtos.php';
     }
+
+    public function mostrarHome(): void {
+        $destaques = $this->droneDAO->listarDestaques();
+        $maisVendidos = $this->droneDAO->listarMaisVendidos(6);
+        require_once '../view/index-home.php';
+    }
 }

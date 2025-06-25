@@ -1,7 +1,8 @@
 <?php
-
-    require_once '../controller/DroneController.php'
-
+    require_once '../controller/DroneController.php';
+    session_start();
+    $clienteLogado = isset($_SESSION['cliente_id']);
+    $tipoSelecionado = $_GET['tipo'] ?? 'todos';
 ?>
 
 <!DOCTYPE html> 
@@ -18,7 +19,7 @@
     <header>
         <div class="container">
             <div class="logo">
-                <h1>DroneStore</h1>
+                <h1>AeroStore</h1>
             </div>
             <nav>
                 <ul>
@@ -27,7 +28,6 @@
                 </ul>
             </nav>
             <div class="icons">
-                <a href="#"><i class="fas fa-search"></i></a>
                 <a href="#"><i class="fas fa-user"></i></a>
                 <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
             </div>
@@ -36,6 +36,9 @@
 
     <main>
         <section class="conteudo-principal">
+
+            <input type="text" class="busca" placeholder="Busque na AeroStore">
+
             <div class="filtro">
                 <div class="ordenar-exibir">
                     <div class="filtro-opcao">
@@ -145,7 +148,33 @@
             </div>
         </div>
     </footer>
-
+    
+    <script>
+        const tipoInicial = '<?= strtolower($tipoSelecionado) ?>';
+    </script>                
     <script src="../assets/js/sessao-produtos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const botoesComprar = document.querySelectorAll('.card button');
+            const contadorCarrinho = document.querySelector('.cart-count');
+            let totalCarrinho = 0;
+
+            const clienteLogado = <?= json_encode($clienteLogado) ?>;
+
+            botoesComprar.forEach(botao => {
+                botao.addEventListener('click', function () {
+                    if (!clienteLogado) {
+                        alert('Faça login para adicionar produtos ao carrinho!');
+                        return;
+                    }
+
+                    alert('Produto adicionado ao carrinho!');
+                    totalCarrinho++;
+                    contadorCarrinho.textContent = totalCarrinho;
+                });
+            });
+        });
+    </script>
+    
 </body>
 </html>

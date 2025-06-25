@@ -136,11 +136,19 @@ main {
     margin: 5rem 0 10rem 0;
 }
 
+.busca {
+    padding: 1.3rem;
+    border: none;
+    border-radius: 3px;
+    width: 70%;
+}
+
 .filtro {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 4rem;
 }
 
 .ordenar-exibir {
@@ -192,7 +200,7 @@ span {
 }
 
 .card.oculto {
-    display: none;
+    display: none !important;
 }
 
 .card img {
