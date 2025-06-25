@@ -1,9 +1,10 @@
 <?php
-    session_start();
-    $clienteLogado = isset($_SESSION['cliente_id']);
+session_start();
+$clienteLogado = isset($_SESSION['cliente_id']);
 ?>
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="../assets/css/home.css">
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -51,7 +53,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Slide 2 -->
                 <div class="carousel-slide">
                     <div class="slide-image" style="background-image: url('https://placeholder.pics/svg/1600x600/DEDEDE/555555/Drone%20Racing');">
@@ -67,7 +69,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Slide 3 -->
                 <div class="carousel-slide">
                     <div class="slide-image" style="background-image: url('https://placeholder.pics/svg/1600x600/DEDEDE/555555/Drone%20Iniciante');">
@@ -84,11 +86,11 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Carousel Controls -->
             <button class="carousel-control prev"><i class="fas fa-chevron-left"></i></button>
             <button class="carousel-control next"><i class="fas fa-chevron-right"></i></button>
-            
+
             <!-- Carousel Indicators -->
             <div class="carousel-indicators">
                 <button class="indicator active" data-slide="0"></button>
@@ -136,7 +138,7 @@
             </div>
             <div class="products-slider">
                 <div class="products-track">
-                    
+
                     <!-- Product 5 -->
                     <?php foreach ($destaques as $drone): ?>
                         <div class="product-card">
@@ -164,7 +166,7 @@
                     <?php endforeach; ?>
 
                 </div>
-                
+
                 <!-- Products Slider Controls -->
                 <button class="products-control prev"><i class="fas fa-chevron-left"></i></button>
                 <button class="products-control next"><i class="fas fa-chevron-right"></i></button>
@@ -285,7 +287,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Testimonial 2 -->
                     <div class="testimonial">
                         <div class="testimonial-content">
@@ -309,7 +311,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Testimonial 3 -->
                     <div class="testimonial">
                         <div class="testimonial-content">
@@ -334,7 +336,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Testimonials Slider Controls -->
                 <button class="testimonials-control prev"><i class="fas fa-chevron-left"></i></button>
                 <button class="testimonials-control next"><i class="fas fa-chevron-right"></i></button>
@@ -397,28 +399,29 @@
         </div>
     </footer>
 
-    <script src="/js/home.js"></script>
+    <script src="../assets/js/home.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-        const botoesComprar = document.querySelectorAll('.add-to-cart-btn');
-        const contadorCarrinho = document.querySelector('.cart-count');
-        let totalCarrinho = 0;
+        document.addEventListener('DOMContentLoaded', function() {
+            const botoesComprar = document.querySelectorAll('.add-to-cart-btn');
+            const contadorCarrinho = document.querySelector('.cart-count');
+            let totalCarrinho = 0;
 
-        const clienteLogado = <?= json_encode($clienteLogado) ?>;
+            const clienteLogado = <?= json_encode($clienteLogado) ?>;
 
-        botoesComprar.forEach(botao => {
-            botao.addEventListener('click', function () {
-                if (!clienteLogado) {
-                    alert('Faça login para adicionar produtos ao carrinho!');
-                    return;
-                }
+            botoesComprar.forEach(botao => {
+                botao.addEventListener('click', function() {
+                    if (!clienteLogado) {
+                        alert('Faça login para adicionar produtos ao carrinho!');
+                        return;
+                    }
 
-                alert('Produto adicionado ao carrinho!');
-                totalCarrinho++;
-                contadorCarrinho.textContent = totalCarrinho;
+                    alert('Produto adicionado ao carrinho!');
+                    totalCarrinho++;
+                    contadorCarrinho.textContent = totalCarrinho;
+                });
             });
         });
-    });
     </script>
 </body>
+
 </html>
