@@ -22,6 +22,7 @@ session_start();
             text-align: center;
         }
 
+
         .mensagem.sucesso {
             background-color: #d4edda;
             color: #155724;
