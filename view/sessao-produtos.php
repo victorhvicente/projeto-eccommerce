@@ -3,6 +3,7 @@ require_once '../controller/DroneController.php';
 session_start();
 $clienteLogado = isset($_SESSION['cliente_id']);
 $tipoSelecionado = $_GET['tipo'] ?? 'todos';
+$nomeCliente = $_SESSION['cliente_nome'] ?? '';
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +31,19 @@ $tipoSelecionado = $_GET['tipo'] ?? 'todos';
                 </ul>
             </nav>
             <div class="icons">
-                <a href="#"><i class="fas fa-user"></i></a>
+                <div class="user-dropdown">
+                    <a href="#"><i class="fas fa-user"></i></a>
+                    <div class="dropdown-content">
+                        <?php if ($clienteLogado): ?>
+                            <span class="user-name"><?= htmlspecialchars($nomeCliente) ?></span>
+                            <a href="#">Minha Conta</a>
+                            <a href="../router/routerLogout.php">Sair</a>
+                        <?php else: ?>
+                            <a href="../view/login.php">Entrar</a>
+                            <a href="../view/cadastro.php">Cadastrar</a>
+                        <?php endif; ?>
+                    </div>
+                </div>
                 <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
             </div>
         </div>

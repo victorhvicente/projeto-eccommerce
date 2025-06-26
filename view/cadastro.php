@@ -40,7 +40,7 @@ session_start();
     <header>
         <div class="container">
             <div class="logo">
-                <h1>DroneStore</h1>
+                <h1>AeroStore</h1>
             </div>
             <nav>
                 <ul>
@@ -89,7 +89,7 @@ session_start();
         <div class="container">
             <div class="footer-columns">
                 <div class="footer-column">
-                    <h3>DroneStore</h3>
+                    <h3>AeroStore</h3>
                     <p>A maior loja especializada em drones do Brasil. Oferecemos produtos de alta qualidade para entusiastas e profissionais.</p>
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-facebook"></i></a>
@@ -123,7 +123,7 @@ session_start();
                     <ul class="contact-info">
                         <li><i class="fas fa-map-marker-alt"></i> Av. Paulista, 1000 - São Paulo, SP</li>
                         <li><i class="fas fa-phone"></i> (11) 5555-1234</li>
-                        <li><i class="fas fa-envelope"></i> contato@dronestore.com.br</li>
+                        <li><i class="fas fa-envelope"></i> contato@aerostore.com.br</li>
                     </ul>
                     <div class="newsletter">
                         <h4>Assine nossa newsletter</h4>
@@ -135,7 +135,7 @@ session_start();
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 DroneStore - Todos os direitos reservados</p>
+                <p>&copy; 2025 AeroStore- Todos os direitos reservados</p>
             </div>
         </div>
     </footer>
