@@ -13,7 +13,6 @@ session_start();
     <link rel="stylesheet" href="../assets/css/cadastro.css">
     <style>
         .mensagem {
-            padding: 15px;
             margin: 10px auto;
             width: 90%;
             max-width: 600px;
