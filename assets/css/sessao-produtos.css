@@ -313,11 +313,14 @@ footer {
 
 .footer-column p {
   margin-bottom: 20px;
+  color: #ffffff;
+  font-weight: 400;
   opacity: 0.8;
 }
 
 .footer-column ul li {
   margin-bottom: 10px;
+  font-size: 16px;
 }
 
 .footer-column ul li a {
@@ -403,6 +406,8 @@ footer {
 .footer-bottom p {
   opacity: 0.7;
   font-size: 14px;
+  color: #ffffff;
+  font-weight: 400;
 }
 
 /* Responsividade */
