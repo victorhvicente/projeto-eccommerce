@@ -184,7 +184,7 @@ $clienteLogado = isset($_SESSION['cliente_id']);
             <div class="products-grid">
                 <?php foreach ($maisVendidos as $drone): ?>
                     <div class="product-card">
-                        <div class="product-image">
+                        <div class="product-best-seller">
                             <a href="#">
                                 <img src="../assets/img/<?= htmlspecialchars($drone->getImagem()) ?>" alt="<?= htmlspecialchars($drone->getNome()) ?>">
                             </a>

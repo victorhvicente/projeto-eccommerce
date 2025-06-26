@@ -144,18 +144,30 @@ nav ul li a:hover {
 
 .product-image {
   width: 60vw;
-  height: 30vh;
+  height: 28vh;
   overflow: hidden;
   position: relative;
 }
 
 .product-image img {
-  width: 29%;
+  width: 20%;
   height: 100%;
-  object-fit: cover;
+  object-fit: countain;
   transition: transform 0.5s;
 }
+.product-best-seller {
+  width: 60vw;
+  height: 30vh;
+  overflow: hidden;
+  position: relative;
+}
 
+.product-best-seller img {
+  width: 35%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.5s;
+}
 
 .product-card:hover .product-image img {
   transform: scale(1.05);
@@ -309,7 +321,7 @@ footer {
 }
 
 .footer-column h3::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -423,17 +435,17 @@ footer {
   header .container {
     flex-wrap: wrap;
   }
-  
+
   nav {
     order: 3;
     width: 100%;
     margin-top: 15px;
   }
-  
+
   nav ul {
     justify-content: center;
   }
-  
+
   nav ul li {
     margin: 0 10px;
   }
@@ -443,33 +455,33 @@ footer {
   .footer-columns {
     grid-template-columns: 1fr;
   }
-  
+
   .footer-column {
     text-align: center;
   }
-  
+
   .footer-column h3::after {
     left: 50%;
     transform: translateX(-50%);
   }
-  
+
   .social-icons {
     justify-content: center;
   }
-  
+
   .contact-info li {
     justify-content: center;
   }
-  
+
   .footer-column .newsletter form {
     flex-direction: column;
   }
-  
+
   .footer-column .newsletter input {
     border-radius: 4px;
     margin-bottom: 10px;
   }
-  
+
   .footer-column .newsletter button {
     border-radius: 4px;
   }
