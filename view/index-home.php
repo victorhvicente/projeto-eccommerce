@@ -1,6 +1,7 @@
 <?php
 session_start();
 $clienteLogado = isset($_SESSION['cliente_id']);
+$nomeCliente = $_SESSION['cliente_nome'] ?? '';
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -8,7 +9,7 @@ $clienteLogado = isset($_SESSION['cliente_id']);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DroneStore - A Maior Loja de Drones do Brasil</title>
+    <title>AeroStore - A Maior Loja de Drones do Brasil</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
@@ -28,7 +29,19 @@ $clienteLogado = isset($_SESSION['cliente_id']);
                 </ul>
             </nav>
             <div class="icons">
-                <a href="#"><i class="fas fa-user"></i></a>
+                <div class="user-dropdown">
+                    <a href="#"><i class="fas fa-user"></i></a>
+                    <div class="dropdown-content">
+                        <?php if ($clienteLogado): ?>
+                            <span class="user-name"><?= htmlspecialchars($nomeCliente) ?></span>
+                            <a href="#">Minha Conta</a>
+                            <a href="../router/routerLogout.php">Sair</a>
+                        <?php else: ?>
+                            <a href="../view/login.php">Entrar</a>
+                            <a href="../view/cadastro.php">Cadastrar</a>
+                        <?php endif; ?>
+                    </div>
+                </div>
                 <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
             </div>
         </div>
@@ -40,7 +53,7 @@ $clienteLogado = isset($_SESSION['cliente_id']);
             <div class="carousel-track">
                 <!-- Slide 1 -->
                 <div class="carousel-slide active">
-                    <div class="slide-image" style="background-image: url('https://placeholder.pics/svg/1600x600/DEDEDE/555555/Drone%20Profissional');">
+                    <div class="slide-image" style="background-image: url('../assets/img/profissional-drone-banner.jpg');">
                         <div class="container">
                             <div class="slide-content">
                                 <h2>Drones Profissionais</h2>
@@ -56,7 +69,7 @@ $clienteLogado = isset($_SESSION['cliente_id']);
 
                 <!-- Slide 2 -->
                 <div class="carousel-slide">
-                    <div class="slide-image" style="background-image: url('https://placeholder.pics/svg/1600x600/DEDEDE/555555/Drone%20Racing');">
+                    <div class="slide-image" style="background-image: url('../assets/img/race-drone-banner.jpg');">
                         <div class="container">
                             <div class="slide-content">
                                 <h2>Drones de Corrida</h2>
@@ -72,7 +85,7 @@ $clienteLogado = isset($_SESSION['cliente_id']);
 
                 <!-- Slide 3 -->
                 <div class="carousel-slide">
-                    <div class="slide-image" style="background-image: url('https://placeholder.pics/svg/1600x600/DEDEDE/555555/Drone%20Iniciante');">
+                    <div class="slide-image" style="background-image: url('../assets/img/mini-drone-banner.png');">
                         <div class="container">
                             <div class="slide-content">
                                 <h2>Mini Drones</h2>
@@ -184,7 +197,7 @@ $clienteLogado = isset($_SESSION['cliente_id']);
             <div class="products-grid">
                 <?php foreach ($maisVendidos as $drone): ?>
                     <div class="product-card">
-                        <div class="product-image">
+                        <div class="product-best-seller">
                             <a href="#">
                                 <img src="../assets/img/<?= htmlspecialchars($drone->getImagem()) ?>" alt="<?= htmlspecialchars($drone->getNome()) ?>">
                             </a>
@@ -270,7 +283,7 @@ $clienteLogado = isset($_SESSION['cliente_id']);
                             <div class="quote-icon">
                                 <i class="fas fa-quote-left"></i>
                             </div>
-                            <p>Comprei meu primeiro drone na DroneStore e fiquei impressionado com a qualidade do produto e o atendimento. Recomendo a todos os entusiastas!</p>
+                            <p>Comprei meu primeiro drone na AeroStore e fiquei impressionado com a qualidade do produto e o atendimento. Recomendo a todos os entusiastas!</p>
                             <div class="testimonial-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -318,7 +331,7 @@ $clienteLogado = isset($_SESSION['cliente_id']);
                             <div class="quote-icon">
                                 <i class="fas fa-quote-left"></i>
                             </div>
-                            <p>Entrega rápida e produto exatamente como descrito. Já é a terceira vez que compro na DroneStore e sempre saio satisfeito.</p>
+                            <p>Entrega rápida e produto exatamente como descrito. Já é a terceira vez que compro na AeroStore e sempre saio satisfeito.</p>
                             <div class="testimonial-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -348,7 +361,7 @@ $clienteLogado = isset($_SESSION['cliente_id']);
         <div class="container">
             <div class="footer-columns">
                 <div class="footer-column">
-                    <h3>DroneStore</h3>
+                    <h3>AeroStore</h3>
                     <p>A maior loja especializada em drones do Brasil. Oferecemos produtos de alta qualidade para entusiastas e profissionais.</p>
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-facebook"></i></a>
@@ -382,7 +395,7 @@ $clienteLogado = isset($_SESSION['cliente_id']);
                     <ul class="contact-info">
                         <li><i class="fas fa-map-marker-alt"></i> Av. Paulista, 1000 - São Paulo, SP</li>
                         <li><i class="fas fa-phone"></i> (11) 5555-1234</li>
-                        <li><i class="fas fa-envelope"></i> contato@dronestore.com.br</li>
+                        <li><i class="fas fa-envelope"></i> contato@aerostore.com</li>
                     </ul>
                     <div class="newsletter">
                         <h4>Assine nossa newsletter</h4>
@@ -394,7 +407,7 @@ $clienteLogado = isset($_SESSION['cliente_id']);
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 DroneStore - Todos os direitos reservados</p>
+                <p>&copy; 2025 AeroStore - Todos os direitos reservados</p>
             </div>
         </div>
     </footer>

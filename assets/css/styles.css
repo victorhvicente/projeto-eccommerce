@@ -89,22 +89,6 @@ nav ul li a:hover {
   color: var(--primary-color);
 }
 
-.icons {
-  display: flex;
-  align-items: center;
-}
-
-.icons a {
-  margin-left: 15px;
-  font-size: 18px;
-  color: var(--dark-color);
-  transition: color 0.3s;
-}
-
-.icons a:hover {
-  color: var(--primary-color);
-}
-
 .cart-icon {
   position: relative;
 }
@@ -144,18 +128,30 @@ nav ul li a:hover {
 
 .product-image {
   width: 60vw;
-  height: 30vh;
+  height: 28vh;
   overflow: hidden;
   position: relative;
 }
 
 .product-image img {
-  width: 29%;
+  width: 20%;
   height: 100%;
-  object-fit: cover;
+  object-fit: countain;
   transition: transform 0.5s;
 }
+.product-best-seller {
+  width: 60vw;
+  height: 30vh;
+  overflow: hidden;
+  position: relative;
+}
 
+.product-best-seller img {
+  width: 35%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.5s;
+}
 
 .product-card:hover .product-image img {
   transform: scale(1.05);
@@ -309,7 +305,7 @@ footer {
 }
 
 .footer-column h3::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -412,6 +408,66 @@ footer {
   font-size: 14px;
 }
 
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  font-size: 18px;
+}
+
+.user-dropdown {
+  position: relative;
+}
+
+.user-dropdown i {
+  cursor: pointer;
+  color: #333;
+  padding: 8px;
+}
+
+.user-name {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.user-name:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  min-width: 140px;
+  border-radius: 5px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  transition: background 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Mostrar o dropdown ao passar o mouse no ícone */
+.user-dropdown:hover .dropdown-content {
+  display: block;
+}
+
 /* Responsividade */
 @media (max-width: 992px) {
   .footer-columns {
@@ -423,17 +479,17 @@ footer {
   header .container {
     flex-wrap: wrap;
   }
-  
+
   nav {
     order: 3;
     width: 100%;
     margin-top: 15px;
   }
-  
+
   nav ul {
     justify-content: center;
   }
-  
+
   nav ul li {
     margin: 0 10px;
   }
@@ -443,33 +499,33 @@ footer {
   .footer-columns {
     grid-template-columns: 1fr;
   }
-  
+
   .footer-column {
     text-align: center;
   }
-  
+
   .footer-column h3::after {
     left: 50%;
     transform: translateX(-50%);
   }
-  
+
   .social-icons {
     justify-content: center;
   }
-  
+
   .contact-info li {
     justify-content: center;
   }
-  
+
   .footer-column .newsletter form {
     flex-direction: column;
   }
-  
+
   .footer-column .newsletter input {
     border-radius: 4px;
     margin-bottom: 10px;
   }
-  
+
   .footer-column .newsletter button {
     border-radius: 4px;
   }
