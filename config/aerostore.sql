@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 24/06/2025 às 22:06
+-- Tempo de geração: 26/06/2025 às 00:48
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -54,29 +54,32 @@ CREATE TABLE `drones` (
   `id_drone` int(11) NOT NULL,
   `nome` varchar(255) DEFAULT NULL,
   `preco` float DEFAULT NULL,
+  `preco_antigo` float DEFAULT NULL,
   `modelo` varchar(255) DEFAULT NULL,
   `tipo` varchar(100) DEFAULT NULL,
   `marca` varchar(255) DEFAULT NULL,
   `descricao` varchar(255) DEFAULT NULL,
   `estoque` int(11) DEFAULT NULL,
   `peso` float DEFAULT NULL,
-  `imagem` varchar(255) DEFAULT NULL
+  `imagem` varchar(255) DEFAULT NULL,
+  `destaque` varchar(3) DEFAULT NULL,
+  `numero_vendas` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Despejando dados para a tabela `drones`
 --
 
-INSERT INTO `drones` (`id_drone`, `nome`, `preco`, `modelo`, `tipo`, `marca`, `descricao`, `estoque`, `peso`, `imagem`) VALUES
-(1, 'Falcon Pro X8', 12999, 'FPX8-2025', 'Profissional', 'SkyWorks', 'Drone profissional com 4K HDR, sensores térmicos e alcance de 8km', 10, 2.5, 'pro-drone-fpx8-2025.png'),
-(2, 'Orion Max 2.0', 9999, 'ORMX2', 'Profissional', 'AeroView', 'Ideal para topografia e agricultura de precisão', 7, 2.1, 'pro-drone-ormx2.jpg'),
-(3, 'TitanVision Ultra', 14990, 'TVU500', 'Profissional', 'VisionFly', 'Drone com câmera 8K e 6 rotores para maior estabilidade', 5, 3.2, 'pro-drone-tvu500.jpg'),
-(4, 'Mini Swift 200', 799, 'MSW200', 'Mini', 'AirNova', 'Drone compacto com câmera HD e estabilização automática', 25, 0.5, 'mini-drone-pfx1.jpg'),
-(5, 'PocketFly X1', 599, 'PFX1', 'Mini', 'MicroDrone', 'Mini drone dobrável com autonomia de 15 minutos', 30, 0.4, 'mini-drone-msw200.jpg'),
-(6, 'NanoAir Lite', 699, 'NAL-1', 'Mini', 'SkyZone', 'Leve, fácil de pilotar e ideal para iniciantes', 20, 0.35, 'mini-drone-nal-1.jpg'),
-(7, 'ThunderBolt Racer Z', 1799, 'TBRZ2024', 'Corrida', 'SpeedAir', 'Drone de corrida com motor brushless e controle de precisão', 15, 0.8, 'corrida-pro-tbrz2024.png'),
-(8, 'Velocity FireStorm', 2499, 'VFS-9', 'Corrida', 'RacePro', 'Velocidade máxima de 130 km/h com baixo peso e resposta instantânea', 10, 0.75, 'corrida-drone-vfs-9.png'),
-(9, 'Vortex X-Surge', 1990, 'VXSG-2K25', 'Corrida', 'HyperJet', 'Drone de corrida projetado para pistas fechadas e manobras agressivas', 12, 0.85, 'vxsg-2k25.jpg');
+INSERT INTO `drones` (`id_drone`, `nome`, `preco`, `preco_antigo`, `modelo`, `tipo`, `marca`, `descricao`, `estoque`, `peso`, `imagem`, `destaque`, `numero_vendas`) VALUES
+(1, 'Falcon Pro X8', 12999, 13999, 'FPX8-2025', 'Profissional', 'SkyWorks', 'Drone profissional com 4K HDR, sensores térmicos e alcance de 8km', 10, 2.5, 'pro-drone-fpx8-2025.png', 'sim', 12),
+(2, 'Orion Max 2.0', 9999, 10999, 'ORMX2', 'Profissional', 'AeroView', 'Ideal para topografia e agricultura de precisão', 7, 2.1, 'pro-drone-ormx2.jpg', 'sim', 17),
+(3, 'TitanVision Ultra', 14990, 15999, 'TVU500', 'Profissional', 'VisionFly', 'Drone com câmera 8K e 6 rotores para maior estabilidade', 5, 3.2, 'pro-drone-tvu500.jpg', 'nao', 11),
+(4, 'Mini Swift 200', 799, 899, 'MSW200', 'Mini', 'AirNova', 'Drone compacto com câmera HD e estabilização automática', 25, 0.5, 'mini-drone-pfx1.jpg', 'sim', 100),
+(5, 'PocketFly X1', 599, 699, 'PFX1', 'Mini', 'MicroDrone', 'Mini drone dobrável com autonomia de 15 minutos', 30, 0.4, 'mini-drone-msw200.jpg', 'nao', 81),
+(6, 'NanoAir Lite', 699, 799, 'NAL-1', 'Mini', 'SkyZone', 'Leve, fácil de pilotar e ideal para iniciantes', 20, 0.35, 'mini-drone-nal-1.jpg', 'sim', 64),
+(7, 'ThunderBolt Racer Z', 1799, 1999, 'TBRZ2024', 'Corrida', 'SpeedAir', 'Drone de corrida com motor brushless e controle de precisão', 15, 0.8, 'corrida-pro-tbrz2024.png', 'nao', 31),
+(8, 'Velocity FireStorm', 2499, 2699, 'VFS-9', 'Corrida', 'RacePro', 'Velocidade máxima de 130 km/h com baixo peso e resposta instantânea', 10, 0.75, 'corrida-drone-vfs-9.png', 'sim', 47),
+(9, 'Vortex X-Surge', 1990, 2299, 'VXSG-2K25', 'Corrida', 'HyperJet', 'Drone de corrida projetado para pistas fechadas e manobras agressivas', 12, 0.85, 'vxsg-2k25.jpg', 'nao', 22);
 
 -- --------------------------------------------------------
 
